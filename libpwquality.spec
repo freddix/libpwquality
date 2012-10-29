@@ -10,7 +10,7 @@ URL:		https://fedorahosted.org/libpwquality/
 BuildRequires:	cracklib-devel
 BuildRequires:	gettext-devel
 BuildRequires:	pam-devel
-BuildRequires:	pkgconfig
+BuildRequires:	pkg-config
 BuildRequires:	python-devel
 Requires:	pam
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
