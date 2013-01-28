@@ -1,11 +1,11 @@
 Summary:	Library for password quality checking and generating random passwords
 Name:		libpwquality
-Version:	1.2.0
-Release:	3
+Version:	1.2.1
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	https://fedorahosted.org/releases/l/i/libpwquality/%{name}-%{version}.tar.bz2
-# Source0-md5:	8827419118064539db70090cbed5cb21
+# Source0-md5:	beb56c9028a713d936e04cc3c50c541d
 URL:		https://fedorahosted.org/libpwquality/
 BuildRequires:	cracklib-devel
 BuildRequires:	gettext-devel
@@ -28,9 +28,6 @@ Requires:	%{name} = %{epoch}:%{version}-%{release}
 %description devel
 Header files for libpwquality library.
 
-%description devel -l pl.UTF-8
-Pliki nagłówkowe biblioteki libpwquality.
-
 %package -n python-pwquality
 Summary:	Python bindings for the libpwquality library
 Group:		Libraries
@@ -44,7 +41,7 @@ Python bindings for the libpwquality library.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoheader}
 %{__automake}
 %{__autoconf}
